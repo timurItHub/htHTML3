@@ -1,0 +1,283 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fff; 
+    color: #333;
+    border-top: 6px solid #88d8b0; 
+}
+
+header, footer {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #88d8b0;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    justify-content: center; 
+}
+
+#boring-menu {
+    background-color: #555;
+    padding: 15px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    max-width: fit-content;
+    margin-right: 20px;
+    margin-top: 20px;
+    height: 145px;
+}
+
+#boring-menu a {
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 19px;
+    transition: color 0.3s ease-in-out;
+}
+
+#boring-menu a:hover {
+    color: #88d8b0;
+}
+
+main div {
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto; 
+}
+
+footer {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 6px solid #88d8b0; 
+}
+
+footer nav ul {
+    margin: 0;
+}
+
+footer nav li {
+    margin-right: 15px;
+}
+
+footer p {
+    margin: 0;
+}
+
+h2 {
+    color: #555;
+}
+
+p {
+    line-height: 1.6;
+}
+
+a {
+    color: #007BFF;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Добавление стиля для подчеркивания при наведении на заголовки */
+h2:hover {
+    border-bottom: 2px solid #555;
+}
+
+/* Стилизация первой буквы в параграфе */
+/* main p:first-of-type::first-letter {
+    font-size: 36px;
+    color: #007BFF;
+    float: left;
+    margin-right: 8px;
+    line-height: 1;
+} */
+
+/* Добавление фона для меню при наведении */
+#boring-menu:hover {
+    background-color: #777;
+}
+
+/* Стилизация кнопок в футере */
+footer nav a {
+    text-decoration: none;
+    color: #000000;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+footer nav a:hover {
+    background-color: #555;
+    color: #88d8b0;
+}
+
+/* Стили для блока ассортимента */
+#assortment {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin: 0 auto; /* Центрирование */
+    max-width: 1200px; /* Максимальная ширина */
+}
+
+/* Стили для продукта в ассортименте */
+.product {
+    width: calc(20% - 10px);
+    margin-bottom: 20px;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product img:hover {
+    transform: scale(1.1);
+}
+
+.product p {
+    margin: 10px 0 0;
+}
+
+.product a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.product a:hover {
+    color: #0056b3;
+}
+
+/* Медиазапросы */
+@media (max-width: 1200px) {
+    #assortment {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    #boring-menu {
+        margin-top: 10px;
+    }
+
+    #assortment {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header, footer {
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav, footer nav {
+        margin-bottom: 15px;
+    }
+
+    nav ul, footer nav ul {
+        flex-direction: column;
+    }
+
+    nav li, footer nav li {
+        margin-bottom: 10px;
+    }
+
+    #boring-menu {
+        margin-top: 0;
+    }
+
+    #boring-menu a {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 0;
+    }
+
+    main div {
+        max-width: 100%;
+    }
+
+    .product {
+        margin-bottom: 10px;
+    }
+}
